@@ -1,6 +1,12 @@
 image: python:3.14
 
+variables:
+  PIPX_HOME: ${CI_PROJECT_DIR}/.cache/share/pipx
+  PIPX_BIN_DIR: ${CI_PROJECT_DIR}/.cache/bin
+  PIPX_MAN_DIR: ${CI_PROJECT_DIR}/.cache/share/man
+
 before_script:
+  - export PATH="$PIPX_BIN_DIR:$PATH"
   - pip install pipx
   - pipx install hatch==1.17.1
 
