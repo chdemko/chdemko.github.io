@@ -9,17 +9,19 @@ have undergone a significant transformation over the years,
 from **N**atural **L**anguage **P**rocessing to **F**ormal **C**oncept **A**nalysis,
 with a focus on **I**mage **P**rocessing and **F**uzzy **L**ogic.
 
-My current research endeavors are centered around the concept of **G**eneralized **C**onvex **H**ull
-in the realm of **F**ormal **C**oncept **A**nalysis applied to complex and heterogeneous data sets.
+My current research endeavors are centered around the concept of **G**eneralized
+**C**onvex **H**ull  in the realm of **F**ormal **C**oncept **A**nalysis applied to
+complex and heterogeneous data sets.
 
 I am presently in charge of instructing the "Programming in `C` Language" courses,
 which are a part of the second-year curriculum for the Computer Science Bachelor's
 degree program at La Rochelle University.
 
 My passion for Judo, which I have practiced for three decades, has significantly impacted
-both my teaching style and my research approach. I am deeply influenced by the words of Jigoro Kano,
-particularly the phrases "自他共栄 - Mutual Welfare and Benefit" and "精力最活用 - Maximum efficient use of energy",
-which resonate with my beliefs and principles.
+both my teaching style and my research approach. I am deeply influenced by the words of
+Jigoro Kano,  particularly the phrases "自他共栄 - Mutual Welfare and Benefit" and
+"精力最活用 - Maximum efficient use of energy", which resonate with my beliefs and
+principles.
 
 ```{toctree}
 :maxdepth: 2
