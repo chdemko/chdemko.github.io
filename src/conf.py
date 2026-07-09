@@ -1,5 +1,8 @@
 """The configuration module for sphinx."""
 
+from pathlib import Path
+import shutil
+
 html_theme = "shibuya"
 
 # Get metadata
@@ -78,19 +81,19 @@ html_theme_options = {
     "accent_color": "crimson",
     "nav_links": [
         {
-            "title": "blog",
+            "title": "📰 Blog",
             "url": "blog/index"
         },
         {
-            "title": "publications",
+            "title": "📚 Publications",
             "url": "publications"
         },
         {
-            "title": "projects",
+            "title": "🏗️ Projects",
             "url": "projects"
         },
         {
-            "title": "teaching",
+            "title": "📖 Teaching",
             "url": "teaching"
         },
     ]
@@ -101,3 +104,15 @@ html_theme_options = {
 bibtex_bibfiles = [
     "refs.bib",
 ]
+
+
+def copy_assets(app, exception):
+    if exception is not None:
+        return
+    source = Path(app.srcdir) / "assets"
+    destination = Path(app.outdir) / "assets"
+    shutil.copytree(source, destination, dirs_exist_ok=True)
+
+
+def setup(app):
+    app.connect("build-finished", copy_assets)

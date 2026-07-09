@@ -3,7 +3,7 @@ orphan: true
 nobreadcrumbs: true
 ---
 
-# 📖 Publications
+# 📚 Publications
 
 ## 🗓️ 2026
 

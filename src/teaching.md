@@ -1,4 +1,4 @@
-# 🏫 Teaching
+# 📖 Teaching
 
 ## Imperative programming - basic level 
 

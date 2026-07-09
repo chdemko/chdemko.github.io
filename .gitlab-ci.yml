@@ -15,7 +15,7 @@ test:
   tags:
     - pagelab
   script:
-  - hatch run build test
+  - hatch run build -- test
   artifacts:
     paths:
     - test
@@ -27,9 +27,11 @@ pages:
   tags:
     - pagelab
   script:
-  - hatch run build public
+  - hatch run build -- public
+  - python -m zipfile -c public.zip public
   artifacts:
     paths:
     - public
+    - public.zip
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
