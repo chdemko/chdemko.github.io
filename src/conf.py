@@ -80,23 +80,12 @@ html_css_files = ["custom.css"]
 html_theme_options = {
     "accent_color": "crimson",
     "nav_links": [
-        {
-            "title": "📰 Blog",
-            "url": "blog/index"
-        },
-        {
-            "title": "📚 Publications",
-            "url": "publications"
-        },
-        {
-            "title": "🏗️ Projects",
-            "url": "projects"
-        },
-        {
-            "title": "📖 Teaching",
-            "url": "teaching"
-        },
-    ]
+        {"title": "📰 Blog", "url": "blog/index"},
+        {"title": "📚 Publications", "url": "publications"},
+        {"title": "🏗️ Projects", "url": "projects"},
+        {"title": "📖 Teaching", "url": "teaching"},
+    ],
+    "page_layout": "simple",
 }
 
 
