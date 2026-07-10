@@ -24,7 +24,17 @@ Learn more »
 :link-alt: smartFCA
 ![smartFCA](/_images/projects/smartFCA.png){w=30ex}
 
-Formal Concept Analysis: an intelligent tool for the analysis of complex data .
+Formal Concept Analysis: an intelligent tool for the analysis of complex data.
++++
+Learn more »
+:::
+
+:::{grid-item-card} INFLUENCEs
+:link: https://influence.univ-lr.fr
+:link-alt: INFLUENCEs
+![INFLUENCEs](/_images/projects/light_influences.png){w=30ex}
+
+Understanding influencer behavior and their transparency with their community.
 +++
 Learn more »
 :::
