@@ -86,8 +86,18 @@ html_theme_options = {
         {"title": "📖 Teaching", "url": "teaching"},
     ],
     "page_layout": "simple",
+    "nav_socials": [""],
+    "foot_socials": ["github", "bluesky", "mastodon", "x"],
+    # Development platforms
+    "github_url": "https://github.com/chdemko",
+    # Chat & Community
+    # Social & Microblogging
+    "x_url": "https://x.com/chdemko",
+    "mastodon_url": "https://mastodon.social/@chdemko",
+    "bluesky_url": "https://bsky.app/profile/chdemko.bsky.social",
+    # Content & Professional
+    "linkedin_url": "https://www.linkedin.com/chdemko",
 }
-
 
 # Bibtex
 bibtex_bibfiles = [
