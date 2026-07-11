@@ -2,7 +2,9 @@
 title: "Welcome to My Sphinx Blog"
 ---
 
-[![Dora's signatory](/_images/Dorabadge1.png)](https://sfdora.org/) ![Christophe Demko](https://gravatar.com/avatar/4ddabe5dc55cc11f1759600e15f95eaf60f2a4b8d0970a0a268e873d9a9321ce?s=500){w=20ex .rounded}
+[![Dora's signatory](/_images/Dorabadge1.png)](https://sfdora.org/){.light-only}
+[![Dora's signatory](/_images/Dorabadge1-white.png)](https://sfdora.org/){.dark-only}
+![Christophe Demko](https://gravatar.com/avatar/4ddabe5dc55cc11f1759600e15f95eaf60f2a4b8d0970a0a268e873d9a9321ce?s=500){w=20ex .rounded}
 
 As an assistant professor, with a tenure dating back to 1995, my research interests
 have undergone a significant transformation over the years,
@@ -19,7 +21,7 @@ degree program at La Rochelle University.
 
 My passion for Judo, which I have practiced for three decades, has significantly impacted
 both my teaching style and my research approach. I am deeply influenced by the words of
-Jigoro Kano,  particularly the phrases "自他共栄 - Mutual Welfare and Benefit" and
+[Jigoro Kano](https://en.wikipedia.org/wiki/Jigoro_Kano),  particularly the phrases "自他共栄 - Mutual Welfare and Benefit" and
 "精力最活用 - Maximum efficient use of energy", which resonate with my beliefs and
 principles.
 

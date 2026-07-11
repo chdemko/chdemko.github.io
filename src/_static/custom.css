@@ -1,4 +1,10 @@
-.yue a:has(> img),
-.yue a:has(> picture) {
+.yue a {
   border:0;
+  text-decoration: underline;
+  text-decoration-color: var(--yue-c-link-border);
+  text-decoration-thickness: 1px;
+}
+
+.yue a:hover {
+  text-decoration-thickness: 2px;
 }
