@@ -87,7 +87,7 @@ html_theme_options = {
     ],
     "page_layout": "simple",
     "nav_socials": [],
-    "foot_socials": ["github", "bluesky", "mastodon", "x"],
+    "foot_socials": ["github", "linkedin", "bluesky", "mastodon", "x"],
     # Development platforms
     "github_url": "https://github.com/chdemko",
     # Chat & Community
@@ -96,7 +96,7 @@ html_theme_options = {
     "mastodon_url": "https://mastodon.social/@chdemko",
     "bluesky_url": "https://bsky.app/profile/chdemko.bsky.social",
     # Content & Professional
-    "linkedin_url": "https://www.linkedin.com/chdemko",
+    "linkedin_url": "https://www.linkedin.com/in/chdemko",
 }
 
 # Bibtex
