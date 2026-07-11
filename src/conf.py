@@ -86,7 +86,7 @@ html_theme_options = {
         {"title": "📖 Teaching", "url": "teaching"},
     ],
     "page_layout": "simple",
-    "nav_socials": [""],
+    "nav_socials": [],
     "foot_socials": ["github", "bluesky", "mastodon", "x"],
     # Development platforms
     "github_url": "https://github.com/chdemko",
