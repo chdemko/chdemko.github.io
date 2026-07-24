@@ -30,7 +30,7 @@ Learn more »
 :::
 
 :::{grid-item-card} INFLUENCEs
-:link: https://influence.univ-lr.fr
+:link: https://influences.univ-lr.fr
 :link-alt: INFLUENCEs
 ![INFLUENCEs](/_images/projects/light_influences.png){w=30ex}
 
