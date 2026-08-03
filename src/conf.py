@@ -7,8 +7,9 @@ html_theme = "shibuya"
 
 # Get metadata
 project = "χristoφe Демко"
-author = "Christophe Demko"
+author = project
 project_copyright = f"1995-%Y, {author}"
+html_title = project
 
 # -- General configuration ------------------------------------------------
 
@@ -42,7 +43,7 @@ suppress_warnings = [
 ]
 
 # Blog configuration
-blog_title = "My Sphinx Blog"
+blog_title = "χristoφe Демко Blog"
 blog_baseurl = "https://example.com"  # change later
 blog_path = "blog"
 fontawesome_included = True
