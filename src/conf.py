@@ -81,8 +81,8 @@ html_theme_options = {
     "nav_links": [
         {"title": "📰 Blog", "url": "blog/index"},
         {"title": "📚 Publications", "url": "publications"},
-        {"title": "🏗️ Projects", "url": "projects"},
         {"title": "📖 Teaching", "url": "teaching"},
+        {"title": "🏗️ Projects", "url": "projects"},
     ],
     "page_layout": "default",
     "nav_socials": [],
