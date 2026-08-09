@@ -1,6 +1,7 @@
 ---
 orphan: true
 nobreadcrumbs: true
+layout: compact
 ---
 
 # 📚 Publications

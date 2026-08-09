@@ -38,13 +38,11 @@ graphviz_output_format = "svg"
 
 plantuml_output_format = "svg"
 
-suppress_warnings = [
-    #    "myst.xref_missing",
-]
+suppress_warnings = []
 
 # Blog configuration
 blog_title = "χristoφe Демко Blog"
-blog_baseurl = "https://example.com"  # change later
+blog_baseurl = "https://chdemko.pagelab.univ-lr.fr"  # change later
 blog_path = "blog"
 fontawesome_included = True
 blog_post_pattern = ["blog/*.md"]
@@ -73,7 +71,7 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-# Theme options are theme-specific and customize the look and feel of a theme
+# Theme options are theme-specific and customise the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_static_path = ["_static"]
@@ -86,7 +84,7 @@ html_theme_options = {
         {"title": "🏗️ Projects", "url": "projects"},
         {"title": "📖 Teaching", "url": "teaching"},
     ],
-    "page_layout": "simple",
+    "page_layout": "default",
     "nav_socials": [],
     "foot_socials": ["github", "linkedin", "bluesky", "mastodon", "x"],
     # Development platforms

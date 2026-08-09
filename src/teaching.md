@@ -1,3 +1,7 @@
+---
+layout: compact
+---
+
 # 📖 Teaching
 
 ## 🎓 Bachelor's level

@@ -1,5 +1,8 @@
-# 🏗️ Projects
+---
+layout: compact
+---
 
+# 🏗️ Projects
 
 ## Research projects
 

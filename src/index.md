@@ -1,5 +1,5 @@
 ---
-title: "Welcome to My Sphinx Blog"
+layout: landing
 ---
 
 [![Dora's signatory](/_images/Dorabadge1.png)](https://sfdora.org/){.light-only}
