@@ -16,7 +16,9 @@ I teach practical sessions (lab work) in the Bachelor's course
 👨‍🏫 Practical sessions instructor — Introduction to programming
 ~~~
 
-~~~{tip} Objectives
+~~~{admonition} Objectives
+:class: tip
+
 - Confidently use several algorithmic/programming styles and paradigms
   (imperative, functional, object-oriented, and multitasking), as well as
   several programming languages.
@@ -35,7 +37,9 @@ and good programming practices.
 🗂️ Responsible lecturer —  Imperative programming - basic level
 ~~~
 
-~~~{tip} Objectives
+~~~{admonition} Objectives
+:class: tip
+
 - Know the specifics of the `C` language
 - Understand memory management in `C`
 - Be familiar with parts of the standard `C` library
@@ -54,7 +58,9 @@ the `C` programming language.
 🗂️ Responsible lecturer — Imperative programming - advanced level
 ~~~
 
-~~~{tip} Objectives
+~~~{admonition} Objectives
+:class: tip
+
 - Be familiar with the complete standard `C` library
 - Use an external library
 - Know advanced `C` types and structures
@@ -76,7 +82,9 @@ part**, in lectures, tutorials, and practical sessions. I also teach the
 👨‍🏫 Course instructor — Software engineering and agile methods
 ~~~
 
-~~~{tip} Objectives
+~~~{admonition} Objectives
+:class: tip
+
 - Apply software engineering best practices: quality, testing, and design
   patterns.
 - Understand software life-cycle models and software quality standards.
@@ -101,7 +109,9 @@ discovering the [L3i laboratory](https://l3i.univ-larochelle.fr/) ecosystem and 
 👨‍🏫 Course instructor — Research discovery
 ~~~
 
-~~~{tip} Objectives
+~~~{admonition} Objectives
+:class: tip
+
 - Discover the scientific activity, projects, and organisation of L3i
   (Computer Science, Image and Interaction Laboratory).
 - Identify a laboratory project and a research question to explore during
