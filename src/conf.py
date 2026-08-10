@@ -77,6 +77,7 @@ html_theme_options = {
          {"title": "🏗️ Projects", "url": "projects"},
     ],
     "page_layout": "compact",
+    "hide_breadcrumbs": True,
     "nav_socials": [],
     "foot_socials": ["github", "linkedin", "bluesky", "mastodon", "x"],
     # Development platforms
