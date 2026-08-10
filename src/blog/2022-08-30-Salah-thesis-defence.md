@@ -1,7 +1,6 @@
 ---
-title: Salah's thesis defence
-date: 2022-08-30
-tags: [GALACTIC]
+description: Salah's thesis defence
+layout: compact
 ---
 
 # Sequence analysis with **GALACTIC** - Generic approach combining **F**ormal **C**oncept **A**nalysis and pattern mining

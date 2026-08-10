@@ -1,7 +1,6 @@
 ---
-title: "GALACTIC architecture (in french)"
-date: 2022-04-09
-tags: [GALACTIC]
+description: GALACTIC architecture (in french)
+layout: compact
 ---
 
 # A video of the **GALACTIC** platform architecture

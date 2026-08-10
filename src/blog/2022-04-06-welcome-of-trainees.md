@@ -1,7 +1,6 @@
 ---
-title: Welcome of trainees
-date: 2022-04-06
-tags: [GALACTIC]
+description: Welcome of trainees
+layout: compact
 ---
 
 # Welcome of trainees for the computer science degree

@@ -25,13 +25,11 @@ both my teaching style and my research approach. I am deeply influenced by the w
 "精力最活用 - Maximum efficient use of energy", which resonate with my beliefs and
 principles.
 
-```{toctree}
-:maxdepth: 2
+~~~{toctree}
 :hidden:
 
 blog/index
 publications
 teaching
 projects
-```
-
+~~~

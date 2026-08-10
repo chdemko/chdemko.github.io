@@ -1,7 +1,6 @@
 ---
-orphan: true
-nobreadcrumbs: true
 layout: compact
+description: "Research publications"
 ---
 
 # 📚 Publications

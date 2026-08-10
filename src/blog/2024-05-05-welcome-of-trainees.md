@@ -1,7 +1,6 @@
 ---
-title: Welcome to Alexy Lafosse
-date: 2024-05-02
-tags: [GALACTIC]
+description: Welcome to Alexy Lafosse
+layout: compact
 ---
 
 # Welcome to Alexy Lafosse

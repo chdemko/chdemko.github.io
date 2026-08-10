@@ -1,10 +1,11 @@
 ---
+description: "Research and personal projects"
 layout: compact
 ---
 
 # 🏗️ Projects
 
-## Research projects
+## 🧠 Research projects
 
 ::::{grid} 1 2 2 2
 :gutter: 1 1 2 2
@@ -44,7 +45,7 @@ Learn more »
 
 ::::
 
-## Personal projects
+## 🏠 Personal projects
 
 ::::{grid} 1 2 2 2
 :gutter: 1 1 2 2    

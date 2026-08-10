@@ -1,7 +1,7 @@
 ---
-title: Welcome to Cyprien Robinaud and Djénaba Barry
-date: 2025-05-05
-tags: [GALACTIC]
+description: Welcome to Cyprien Robinaud and Djénaba Barry
+layout: compact
+orphan: true
 ---
 
 # Welcome to Cyprien Robinaud and Djénaba Barry

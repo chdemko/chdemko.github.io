@@ -1,7 +1,6 @@
 ---
-title: Welcome of trainees, second phase
-date: 2022-04-29
-tags: [GALACTIC]
+description: Welcome of trainees, second phase
+layout: compact
 ---
 
 # Welcome of trainees for the computer science degree

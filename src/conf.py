@@ -16,7 +16,6 @@ html_title = project
 extensions = [
     "sphinx.ext.graphviz",
     "myst_parser",
-    "ablog",
     "sphinx_design",
     "sphinxcontrib.bibtex",
     "sphinxcontrib.plantuml",
@@ -39,13 +38,6 @@ graphviz_output_format = "svg"
 plantuml_output_format = "svg"
 
 suppress_warnings = []
-
-# Blog configuration
-blog_title = "χristoφe Демко Blog"
-blog_baseurl = "https://chdemko.pagelab.univ-lr.fr"  # change later
-blog_path = "blog"
-fontawesome_included = True
-blog_post_pattern = ["blog/*.md"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
@@ -79,10 +71,10 @@ html_css_files = ["custom.css"]
 html_theme_options = {
     "accent_color": "crimson",
     "nav_links": [
-        {"title": "📰 Blog", "url": "blog/index"},
-        {"title": "📚 Publications", "url": "publications"},
-        {"title": "📖 Teaching", "url": "teaching"},
-        {"title": "🏗️ Projects", "url": "projects"},
+         {"title": "📰 Blog", "url": "blog/index"},
+         {"title": "📚 Publications", "url": "publications"},
+         {"title": "📖 Teaching", "url": "teaching"},
+         {"title": "🏗️ Projects", "url": "projects"},
     ],
     "page_layout": "default",
     "nav_socials": [],

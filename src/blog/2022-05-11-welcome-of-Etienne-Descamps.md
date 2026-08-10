@@ -1,7 +1,6 @@
 ---
-title: Welcome of a research engineer
-date: 2022-05-11
-tags: [GALACTIC]
+description: Welcome of a research engineer
+layout: compact
 ---
 
 # Welcome of a research engineer, Étienne Descamps

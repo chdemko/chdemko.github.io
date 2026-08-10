@@ -1,7 +1,6 @@
 ---
-title: Welcome to Romain Coste
-date: 2024-02-02
-tags: [GALACTIC]
+description: Welcome to Romain Coste
+layout: compact
 ---
 
 # Welcome to Romain Coste

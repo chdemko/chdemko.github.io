@@ -1,7 +1,6 @@
 ---
-title: "Jeremy's thesis defence"
-date: 2023-05-22
-tags: [GALACTIC]
+description: Jeremy's thesis defence
+layout: compact
 ---
 
 # Jeremy's thesis defence
