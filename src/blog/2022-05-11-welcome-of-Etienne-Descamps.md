@@ -1,6 +1,5 @@
 ---
 description: Welcome of a research engineer
-layout: compact
 ---
 
 # Welcome of a research engineer, Étienne Descamps

@@ -1,6 +1,5 @@
 ---
 description: Welcome of trainees, second phase
-layout: compact
 ---
 
 # Welcome of trainees for the computer science degree

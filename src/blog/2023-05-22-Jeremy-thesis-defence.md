@@ -1,6 +1,5 @@
 ---
 description: Jeremy's thesis defence
-layout: compact
 ---
 
 # Jeremy's thesis defence

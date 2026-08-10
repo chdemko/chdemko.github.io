@@ -1,6 +1,5 @@
 ---
 description: Welcome to Alexy Lafosse
-layout: compact
 ---
 
 # Welcome to Alexy Lafosse

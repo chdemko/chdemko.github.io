@@ -1,6 +1,5 @@
 ---
 description: Welcome to Romain Coste
-layout: compact
 ---
 
 # Welcome to Romain Coste

@@ -1,6 +1,5 @@
 ---
 description: GALACTIC architecture (in french)
-layout: compact
 ---
 
 # A video of the **GALACTIC** platform architecture

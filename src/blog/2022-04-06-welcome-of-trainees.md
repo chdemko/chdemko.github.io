@@ -1,6 +1,5 @@
 ---
 description: Welcome of trainees
-layout: compact
 ---
 
 # Welcome of trainees for the computer science degree

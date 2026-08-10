@@ -1,6 +1,5 @@
 ---
 description: "Research and personal projects"
-layout: compact
 ---
 
 # 🏗️ Projects

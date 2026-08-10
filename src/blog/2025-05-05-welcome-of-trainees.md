@@ -1,7 +1,5 @@
 ---
 description: Welcome to Cyprien Robinaud and Djénaba Barry
-layout: compact
-orphan: true
 ---
 
 # Welcome to Cyprien Robinaud and Djénaba Barry

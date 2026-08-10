@@ -76,7 +76,7 @@ html_theme_options = {
          {"title": "📖 Teaching", "url": "teaching"},
          {"title": "🏗️ Projects", "url": "projects"},
     ],
-    "page_layout": "default",
+    "page_layout": "compact",
     "nav_socials": [],
     "foot_socials": ["github", "linkedin", "bluesky", "mastodon", "x"],
     # Development platforms

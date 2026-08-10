@@ -1,6 +1,5 @@
 ---
 description: Salah's thesis defence
-layout: compact
 ---
 
 # Sequence analysis with **GALACTIC** - Generic approach combining **F**ormal **C**oncept **A**nalysis and pattern mining

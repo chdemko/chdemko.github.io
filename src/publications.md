@@ -1,5 +1,4 @@
 ---
-layout: compact
 description: "Research publications"
 ---
 
