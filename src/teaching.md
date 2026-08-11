@@ -12,7 +12,7 @@ I teach practical sessions (lab work) in the Bachelor's course
 *Introduction to programming*.
 
 ~~~{note}
-👨‍🏫 Practical sessions instructor — Introduction to programming
+{bdg-primary}`Practical sessions instructor` — Introduction to programming
 ~~~
 
 ~~~{admonition} Objectives
@@ -33,7 +33,7 @@ of the `C` programming language, with a strong focus on memory management
 and good programming practices.
 
 ~~~{note}
-🗂️ Responsible lecturer —  Imperative programming - basic level
+{bdg-primary}`Responsible lecturer` —  Imperative programming - basic level
 ~~~
 
 ~~~{admonition} Objectives
@@ -54,7 +54,7 @@ Computer Science Bachelor's degree) provides an advanced understanding of
 the `C` programming language.
 
 ~~~{note}
-🗂️ Responsible lecturer — Imperative programming - advanced level
+{bdg-primary}`Responsible lecturer` — Imperative programming - advanced level
 ~~~
 
 ~~~{admonition} Objectives
@@ -78,7 +78,7 @@ part**, in lectures, tutorials, and practical sessions. I also teach the
 **Docker practical sessions**.
 
 ~~~{note}
-👨‍🏫 Course instructor — Software engineering and agile methods
+{bdg-primary}`Course instructor` — Software engineering and agile methods
 ~~~
 
 ~~~{admonition} Objectives
@@ -105,7 +105,7 @@ I also teach in the Master's course *Research discovery*, focused on
 discovering the [L3i laboratory](https://l3i.univ-larochelle.fr/) ecosystem and scientific practice.
 
 ~~~{note}
-👨‍🏫 Course instructor — Research discovery
+{bdg-primary}`Course instructor` — Research discovery
 ~~~
 
 ~~~{admonition} Objectives
