@@ -2,7 +2,7 @@
 description: Salah's thesis defence
 ---
 
-# Sequence analysis with **GALACTIC** - Generic approach combining **F**ormal **C**oncept **A**nalysis and pattern mining
+# 🗓️ 2022-08-30 — Sequence analysis with **GALACTIC** - Generic approach combining **F**ormal **C**oncept **A**nalysis and pattern mining
 
 Salah Eddine Boukhetta defended his thesis on August 30th, 2022. Here is the video of the presentation (in french) and a short summary.
 

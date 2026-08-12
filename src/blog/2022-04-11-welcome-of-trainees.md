@@ -2,7 +2,7 @@
 description: Welcome of trainees
 ---
 
-# Welcome of trainees for the computer science degree
+# 🗓️ 2022-04-11 — Welcome of trainees for the computer science degree
 
 On April 11, 2022, we welcome 3 trainees from the computer science degree of La
 Rochelle to develop the [**GALACTIC**](https://www.thegalactic.org/) platform:

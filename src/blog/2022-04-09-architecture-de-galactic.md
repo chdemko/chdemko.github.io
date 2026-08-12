@@ -2,7 +2,7 @@
 description: GALACTIC architecture (in french)
 ---
 
-# A video of the **GALACTIC** platform architecture
+# 🗓️ 2022-04-09 — A video of the **GALACTIC** platform architecture
 
 <div style="
   position: relative;

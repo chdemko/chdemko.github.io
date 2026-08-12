@@ -4,6 +4,7 @@ description: "Blog posts"
 
 # 📰 Blog
 
+* 🗓️ 2026-08-12 - [🏁 End of CRCT](2026-08-12-end-of-CRCT.md)
 * 🗓️ 2026-07-05 - [🚀 GALACTIC 0.5 is here!](2026-07-05-GALACTIC-0.5.md)
 * 🗓️ 2026-05-11 - [Welcome to Julien Linares](2026-05-11-welcome-of-trainees.md)
 * 🗓️ 2025-05-05 - [Welcome to Cyprien Robinaud and Djénaba Barry](2025-05-05-welcome-of-trainees.md)
@@ -19,6 +20,7 @@ description: "Blog posts"
 ~~~{toctree}
 :hidden:
 
+2026-08-12-end-of-CRCT
 2026-07-05-GALACTIC-0.5
 2026-05-11-welcome-of-trainees
 2025-05-05-welcome-of-trainees

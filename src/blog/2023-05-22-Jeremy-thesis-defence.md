@@ -2,7 +2,7 @@
 description: Jeremy's thesis defence
 ---
 
-# Jeremy's thesis defence
+# 🗓️ 2023-05-22 — Jeremy's thesis defence
 
 Jérémy Richard defended his thesis on May 22th, 2023. Here is a short summary in french.
 
