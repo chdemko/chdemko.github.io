@@ -4,8 +4,6 @@ dependencies = [
   "shibuya~=2026.7.12",
   "myst-parser~=5.1",
   "sphinx-design~=0.7",
-  "sphinxcontrib-mermaid~=2.0",
-  "sphinxcontrib-plantuml~=0.31",
   "sphinxcontrib-bibtex~=2.7",
   "sphinx_last_updated_by_git~=0.3",
 ]

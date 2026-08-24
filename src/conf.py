@@ -18,7 +18,6 @@ extensions = [
     "myst_parser",
     "sphinx_design",
     "sphinxcontrib.bibtex",
-    "sphinxcontrib.plantuml",
     "sphinx_last_updated_by_git",
 ]
 
