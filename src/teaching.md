@@ -8,8 +8,8 @@ description: "Current teaching activities"
 
 ### 🌱 Programming 
 
-I teach practical sessions (lab work) in the Bachelor's course
-*Introduction to programming*.
+I teach practical sessions (lab work) in the Bachelor's course *Introduction to
+programming*.
 
 ~~~{note}
 {bdg-primary}`Practical sessions instructor` — Introduction to programming
@@ -27,10 +27,10 @@ I teach practical sessions (lab work) in the Bachelor's course
 
 ### 🚀 Programming
 
-The *Imperative programming - basic level* course (2nd year of the
-Computer Science Bachelor's degree) provides a foundational understanding
-of the `C` programming language, with a strong focus on memory management
-and good programming practices.
+The *Imperative programming - basic level* course (2nd year of the Computer
+Science Bachelor's degree) provides a foundational understanding of the `C`
+programming language, with a strong focus on memory management and good
+programming practices.
 
 ~~~{note}
 {bdg-primary}`Responsible lecturer` —  Imperative programming - basic level
@@ -49,9 +49,9 @@ and good programming practices.
 
 ### 🏆 Programming
 
-The *Imperative programming - advanced level* course (2nd year of the
-Computer Science Bachelor's degree) provides an advanced understanding of
-the `C` programming language.
+The *Imperative programming - advanced level* course (2nd year of the Computer
+Science Bachelor's degree) provides an advanced understanding of the `C`
+programming language.
 
 ~~~{note}
 {bdg-primary}`Responsible lecturer` — Imperative programming - advanced level
@@ -73,9 +73,9 @@ the `C` programming language.
 
 ### 🧑‍🔬 Software engineering
 
-I teach in this Master's course and I am responsible for the **CI/CD
-part**, in lectures, tutorials, and practical sessions. I also teach the
-**Docker practical sessions**.
+I teach in this Master's course and I am responsible for the **CI/CD part**, in
+lectures, tutorials, and practical sessions. I also teach the **Docker practical
+sessions**.
 
 ~~~{note}
 {bdg-primary}`Course instructor` — Software engineering and agile methods
@@ -101,8 +101,9 @@ part**, in lectures, tutorials, and practical sessions. I also teach the
 
 ### 🧠 Research discovery
 
-I also teach in the Master's course *Research discovery*, focused on
-discovering the [L3i laboratory](https://l3i.univ-larochelle.fr/) ecosystem and scientific practice.
+I also teach in the Master's course *Research discovery*, focused on discovering
+the [L3i laboratory](https://l3i.univ-larochelle.fr/) ecosystem and scientific
+practice.
 
 ~~~{note}
 {bdg-primary}`Course instructor` — Research discovery

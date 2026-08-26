@@ -16,7 +16,8 @@ description: "Research and personal projects"
 ![GALACTIC](/_images/projects/dark_galactic.svg){.dark-only w=30ex}
 
 **GALACTIC** provides a core application framework for Formal Concept Analysis,
-which can be extended with various application implementations and user interfaces.
+which can be extended with various application implementations and user
+interfaces.
 
 +++
 Learn more »
