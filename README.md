@@ -14,11 +14,12 @@ provided by La Rochelle University (`pagelab` tag).
 
 The extensions used in this project are listed in the `pyproject.toml` file:
 
-* [myst-parser](https://myst-parser.readthedocs.io/) for parsing Markdown files with MyST syntax.
-* [sphinx-design](https://sphinx-design.readthedocs.io/) for creating responsive and visually appealing designs in
-  Sphinx documentation.
-* [sphinxcontrib-bibtex](https://sphinxcontrib-bibtex.readthedocs.io/) for managing bibliographies and citations in
-  Sphinx documentation.
+* [myst-parser](https://myst-parser.readthedocs.io/) for parsing Markdown files with
+  MyST syntax.
+* [sphinx-design](https://sphinx-design.readthedocs.io/) for creating responsive and
+  visually appealing designs in Sphinx documentation.
+* [sphinxcontrib-bibtex](https://sphinxcontrib-bibtex.readthedocs.io/) for managing
+  bibliographies and citations in Sphinx documentation.
 
 ## Build
 
