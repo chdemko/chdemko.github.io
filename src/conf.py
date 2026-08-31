@@ -14,7 +14,6 @@ html_title = project
 # -- General configuration ------------------------------------------------
 
 extensions = [
-    "sphinx.ext.graphviz",
     "myst_parser",
     "sphinx_design",
     "sphinxcontrib.bibtex",
