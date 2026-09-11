@@ -68,10 +68,10 @@ html_css_files = ["custom.css"]
 html_theme_options = {
     "accent_color": "crimson",
     "nav_links": [
-         {"title": "📰 Blog", "url": "blog/index"},
-         {"title": "📚 Publications", "url": "publications"},
-         {"title": "📖 Teaching", "url": "teaching"},
-         {"title": "🏗️ Projects", "url": "projects"},
+        {"title": "📰 Blog", "url": "blog/index"},
+        {"title": "📚 Publications", "url": "publications"},
+        {"title": "📖 Teaching", "url": "teaching"},
+        {"title": "🏗️ Projects", "url": "projects"},
     ],
     "page_layout": "compact",
     "hide_breadcrumbs": True,
@@ -93,8 +93,63 @@ bibtex_bibfiles = [
     "refs.bib",
 ]
 
-# Use the unsrtalpha style as the default bibliography style.
-bibtex_default_style = "unsrtalpha"
+from pybtex.plugin import register_plugin
+from pybtex.style.formatting.unsrt import Style as UnsrtStyle
+from pybtex.style.labels import BaseLabelStyle
+
+
+class MyLabelStyle(BaseLabelStyle):
+    def format_labels(self, sorted_entries):
+        counters = {
+            "J": {},
+            "C": {},
+            "S": {},
+            "W": {},
+            "B": {},
+            "H": {},
+            "T": {},
+            "R": {},
+            "P": {},
+        }
+
+        for entry in sorted_entries:
+            if entry.type == "article":
+                prefix = "J"
+            elif entry.type in ("inproceedings", "conference"):
+                prefix = "C"
+            elif entry.type == "software":
+                prefix = "S"
+            elif entry.type == "inbook":
+                prefix = "H"
+            elif entry.type == "book":
+                prefix = "B"
+            elif entry.type == "phdthesis":
+                prefix = "P"
+            elif entry.type == "techreport":
+                prefix = "R"
+            else:
+                prefix = "W"
+
+            year = entry.fields.get("year", "????")
+
+            counters[prefix].setdefault(year, 0)
+            counters[prefix][year] += 1
+
+            yield f"{prefix}-{year}-{counters[prefix][year]}"
+
+
+class MyStyle(UnsrtStyle):
+    default_label_style = MyLabelStyle
+
+
+register_plugin(
+    "pybtex.style.formatting",
+    "my_style",
+    MyStyle,
+)
+
+bibtex_default_style = "my_style"
+bibtex_reference_style = "label"
 
 
 def copy_assets(app, exception):
