@@ -157,7 +157,7 @@ class MyStyle(UnsrtStyle):
         if pub_type == 'INT':
             badge = BootstrapBadge('INT', css_class="primary")
         elif pub_type == 'NAT':
-            badge = BootstrapBadge('NAT', css_class="secondary)
+            badge = BootstrapBadge('NAT', css_class="secondary")
         else:
             return formatted
         formatted.text = Text(badge, " ", formatted.text)
