@@ -155,9 +155,9 @@ class MyStyle(UnsrtStyle):
         pub_type = entry.fields.get('audience', '').upper()
 
         if pub_type == 'INT':
-            badge = BootstrapBadge('INT', css_class="primary", title="International audience")
+            badge = BootstrapBadge('INT', css_class="primary")
         elif pub_type == 'NAT':
-            badge = BootstrapBadge('NAT', css_class="secondary", title="National audience")
+            badge = BootstrapBadge('NAT', css_class="secondary)
         else:
             return formatted
         formatted.text = Text(badge, " ", formatted.text)
