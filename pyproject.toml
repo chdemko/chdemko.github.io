@@ -5,6 +5,7 @@ dependencies = [
   "myst-parser~=5.1",
   "sphinx-design~=0.7",
   "sphinxcontrib-bibtex~=2.7",
+  "pybtex~=0.26"
 ]
 
 [tool.hatch.envs.default.scripts]

@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import shutil
+import sys
 
 html_theme = "shibuya"
 
@@ -10,6 +11,9 @@ project = "χristoφe Демко"
 author = project
 project_copyright = f"1995-%Y, {author}"
 html_title = project
+
+
+sys.path.insert(0, str(Path(__file__).parent))
 
 # -- General configuration ------------------------------------------------
 
@@ -96,6 +100,7 @@ bibtex_bibfiles = [
 from pybtex.plugin import register_plugin
 from pybtex.style.formatting.unsrt import Style as UnsrtStyle
 from pybtex.style.labels import BaseLabelStyle
+from pybtex.richtext import Text
 
 
 class MyLabelStyle(BaseLabelStyle):
@@ -138,9 +143,25 @@ class MyLabelStyle(BaseLabelStyle):
             yield f"{prefix}-{year}-{counters[prefix][year]}"
 
 
+
+from custom_pybtex import BootstrapBadge
+
+
 class MyStyle(UnsrtStyle):
     default_label_style = MyLabelStyle
 
+    def format_entry(self, label, entry, bib_data=None):
+        formatted = super().format_entry(label, entry, bib_data=bib_data)
+        pub_type = entry.fields.get('audience', '').upper()
+
+        if pub_type == 'INT':
+            badge = BootstrapBadge('INT', css_class="primary", title="International audience")
+        elif pub_type == 'NAT':
+            badge = BootstrapBadge('NAT', css_class="secondary", title="National audience")
+        else:
+            return formatted
+        formatted.text = Text(badge, " ", formatted.text)
+        return formatted
 
 register_plugin(
     "pybtex.style.formatting",

@@ -4,6 +4,8 @@ description: "Research publications"
 
 # 📚 Publications
 
+{bdg-primary}`INT` International audience {bdg-secondary}`NAT` National audience
+
 ## 🗓️ 2026
 
 ::::{tab-set}
