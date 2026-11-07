@@ -4,502 +4,209 @@ description: "Research publications"
 
 # 📚 Publications
 
-{bdg-primary}`INT` International audience {bdg-secondary}`NAT` National audience
+```{raw} html
+<div class="pub-filter" role="radiogroup" aria-labelledby="pub-label-audience" data-filter="audience">
+  <span class="pub-label" id="pub-label-audience">Filter by Scope:</span>
+  <input type="radio" name="pub-audience" id="pub-audience-all" value="all" checked>
+  <label for="pub-audience-all" class="sd-btn sd-btn-success">ALL</label>
+  <input type="radio" name="pub-audience" id="pub-audience-int" value="int">
+  <label for="pub-audience-int" class="sd-btn sd-btn-primary" title="International audience">INT</label>
+  <input type="radio" name="pub-audience" id="pub-audience-nat" value="nat">
+  <label for="pub-audience-nat" class="sd-btn sd-btn-secondary" title="National audience">NAT</label>
+</div>
+<div class="pub-filter" role="radiogroup" aria-labelledby="pub-label-type" data-filter="type">
+  <span class="pub-label" id="pub-label-type">Filter by Type:</span>
+  <input type="radio" name="pub-type" id="pub-type-all" value="all" checked>
+  <label for="pub-type-all" class="sd-btn sd-btn-success">ALL</label>
+  <input type="radio" name="pub-type" id="pub-type-article" value="article">
+  <label for="pub-type-article" class="sd-btn sd-btn-journal">Journal</label>
+  <input type="radio" name="pub-type" id="pub-type-inproceedings" value="inproceedings">
+  <label for="pub-type-inproceedings" class="sd-btn sd-btn-info">Conference</label>
+  <input type="radio" name="pub-type" id="pub-type-misc" value="misc">
+  <label for="pub-type-misc" class="sd-btn sd-btn-warning">Communication</label>
+  <input type="radio" name="pub-type" id="pub-type-software" value="software">
+  <label for="pub-type-software" class="sd-btn sd-btn-dark">Software</label>
+  <input type="radio" name="pub-type" id="pub-type-book" value="book">
+  <label for="pub-type-book" class="sd-btn sd-btn-danger">Book</label>
+  <input type="radio" name="pub-type" id="pub-type-inbook" value="inbook">
+  <label for="pub-type-inbook" class="sd-btn sd-btn-danger">Chapter</label>
+  <input type="radio" name="pub-type" id="pub-type-phdthesis" value="phdthesis">
+  <label for="pub-type-phdthesis" class="sd-btn sd-btn-secondary">Thesis</label>
+  <input type="radio" name="pub-type" id="pub-type-techreport" value="techreport">
+  <label for="pub-type-techreport" class="sd-btn sd-btn-secondary">Report</label>
+</div>
+```
 
 ## 🗓️ 2026
 
-::::{tab-set}
-
-:::{tab-item} Journals
 ~~~{bibliography}
-:filter: year == "2026" and type == "article"
+:filter: year == "2026"
 ~~~
-:::
-
-:::{tab-item} Conferences
-~~~{bibliography}
-:filter: year == "2026" and type == "inproceedings"
-~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "2026" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 2025
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "2025" and type == "inproceedings"
+:filter: year == "2025"
 ~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "2025" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 2024
 
-::::{tab-set}
-
-:::{tab-item} Journals
 ~~~{bibliography}
-:filter: year == "2024" and type == "article"
+:filter: year == "2024"
 ~~~
-:::
-
-:::{tab-item} Conferences
-~~~{bibliography}
-:filter: year == "2024" and type == "inproceedings"
-~~~
-:::
-
-::::
 
 ## 🗓️ 2023
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "2023" and type == "inproceedings"
+:filter: year == "2023"
 ~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "2023" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 2022
 
-::::{tab-set}
-
-:::{tab-item} Chapters
 ~~~{bibliography}
-:filter: year == "2022" and type == "inbook"
+:filter: year == "2022"
 ~~~
-:::
-
-:::{tab-item} Conferences
-~~~{bibliography}
-:filter: year == "2022" and type == "inproceedings"
-~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "2022" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 2021
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "2021" and type == "inproceedings"
+:filter: year == "2021"
 ~~~
-:::
-
-::::
 
 ## 🗓️ 2020
 
-::::{tab-set}
-
-:::{tab-item} Journals
 ~~~{bibliography}
-:filter: year == "2020" and type == "article"
+:filter: year == "2020"
 ~~~
-:::
-
-:::{tab-item} Conferences
-~~~{bibliography}
-:filter: year == "2020" and type == "inproceedings"
-~~~
-:::
-
-::::
 
 ## 🗓️ 2019
 
-::::{tab-set}
-
-:::{tab-item} Communications
 ~~~{bibliography}
-:filter: year == "2019" and type == "misc"
+:filter: year == "2019"
 ~~~
-:::
-
-:::{tab-item} Softwares
-~~~{bibliography}
-:filter: year == "2019" and type == "software"
-~~~
-:::
-
-::::
 
 ## 🗓️ 2018
 
-::::{tab-set}
-
-:::{tab-item} Journals
 ~~~{bibliography}
-:filter: year == "2018" and type == "article"
+:filter: year == "2018"
 ~~~
-:::
-
-::::
 
 ## 🗓️ 2017
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "2017" and type == "inproceedings"
+:filter: year == "2017"
 ~~~
-:::
-
-::::
 
 ## 🗓️ 2015
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "2015" and type == "inproceedings"
+:filter: year == "2015"
 ~~~
-:::
-
-::::
 
 ## 🗓️ 2014
 
-::::{tab-set}
-
-:::{tab-item} Books
 ~~~{bibliography}
-:filter: year == "2014" and type == "book"
+:filter: year == "2014"
 ~~~
-:::
-
-:::{tab-item} Softwares
-~~~{bibliography}
-:filter: year == "2014" and type == "software"
-~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "2014" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 2013
 
-::::{tab-set}
-
-:::{tab-item} Softwares
 ~~~{bibliography}
-:filter: year == "2013" and type == "software"
+:filter: year == "2013"
 ~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "2013" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 2012
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "2012" and type == "inproceedings"
+:filter: year == "2012"
 ~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "2012" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 2011
 
-::::{tab-set}
-
-:::{tab-item} Books
 ~~~{bibliography}
-:filter: year == "2011" and type == "book"
+:filter: year == "2011"
 ~~~
-:::
-
-:::{tab-item} Conferences
-~~~{bibliography}
-:filter: year == "2011" and type == "inproceedings"
-~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "2011" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 2010
 
-::::{tab-set}
-
-:::{tab-item} Communications
 ~~~{bibliography}
-:filter: year == "2010" and type == "misc"
+:filter: year == "2010"
 ~~~
-:::
-
-::::
 
 ## 🗓️ 2009
 
-::::{tab-set}
-
-:::{tab-item} Communications
 ~~~{bibliography}
-:filter: year == "2009" and type == "misc"
+:filter: year == "2009"
 ~~~
-:::
-
-::::
 
 ## 🗓️ 2007
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "2007" and type == "inproceedings"
+:filter: year == "2007"
 ~~~
-:::
-
-::::
 
 ## 🗓️ 2006
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "2006" and type == "inproceedings"
+:filter: year == "2006"
 ~~~
-:::
-
-::::
 
 ## 🗓️ 2000
 
-::::{tab-set}
-
-:::{tab-item} Journals
 ~~~{bibliography}
-:filter: year == "2000" and type == "article"
+:filter: year == "2000"
 ~~~
-:::
-
-::::
 
 ## 🗓️ 1999
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "1999" and type == "inproceedings"
+:filter: year == "1999"
 ~~~
-:::
-
-::::
 
 ## 🗓️ 1998
 
-::::{tab-set}
-
-:::{tab-item} Journals
 ~~~{bibliography}
-:filter: year == "1998" and type == "article"
+:filter: year == "1998"
 ~~~
-:::
-
-:::{tab-item} Chapters
-~~~{bibliography}
-:filter: year == "1998" and type == "inbook"
-~~~
-:::
-
-:::{tab-item} Conferences
-~~~{bibliography}
-:filter: year == "1998" and type == "inproceedings"
-~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "1998" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 1997
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "1997" and type == "inproceedings"
+:filter: year == "1997"
 ~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "1997" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 1996
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "1996" and type == "inproceedings"
+:filter: year == "1996"
 ~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "1996" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 1995
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "1995" and type == "inproceedings"
+:filter: year == "1995"
 ~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "1995" and type == "misc"
-~~~
-:::
-
-:::{tab-item} Reports
-~~~{bibliography}
-:filter: year == "1995" and type == "techreport"
-~~~
-:::
-
-::::
 
 ## 🗓️ 1994
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "1994" and type == "inproceedings"
+:filter: year == "1994"
 ~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "1994" and type == "misc"
-~~~
-:::
-
-:::{tab-item} Reports
-~~~{bibliography}
-:filter: year == "1994" and type == "techreport"
-~~~
-:::
-
-::::
 
 ## 🗓️ 1993
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "1993" and type == "inproceedings"
+:filter: year == "1993"
 ~~~
-:::
-
-::::
 
 ## 🗓️ 1992
 
-::::{tab-set}
-
-:::{tab-item} PhD Thesis
 ~~~{bibliography}
-:filter: year == "1992" and type == "phdthesis"
+:filter: year == "1992"
 ~~~
-:::
-
-:::{tab-item} Communications
-~~~{bibliography}
-:filter: year == "1992" and type == "misc"
-~~~
-:::
-
-::::
 
 ## 🗓️ 1991
 
-::::{tab-set}
-
-:::{tab-item} Conferences
 ~~~{bibliography}
-:filter: year == "1991" and type == "inproceedings"
+:filter: year == "1991"
 ~~~
-:::
-
-::::

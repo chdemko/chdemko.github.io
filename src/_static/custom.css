@@ -1,0 +1,59 @@
+
+/* Publication filter (radio inputs displayed as buttons) */
+.pub-filter {
+  margin: 0.5rem 0;
+}
+
+.pub-filter input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pub-filter label {
+  cursor: pointer;
+  opacity: 0.6;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding: 0.2rem 0.5rem;
+}
+
+.pub-filter input:checked + label {
+  opacity: 1;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.pub-filter input:focus-visible + label {
+  outline-style: dashed;
+}
+
+.pub-label {
+  font-variant: small-caps;
+  font-weight: 700;
+}
+
+/* Custom purple color for journals (not provided by sphinx-design) */
+.sd-bg-journal {
+  background-color: #7c3aed !important;
+}
+
+.sd-bg-text-journal {
+  color: #fff !important;
+}
+
+.sd-btn-journal {
+  background-color: #7c3aed;
+  border-color: #7c3aed;
+  color: #fff;
+}
+
+.sd-btn-journal:hover {
+  background-color: #6d28d9;
+  border-color: #6d28d9;
+  color: #fff;
+}
+
+.pub-hidden {
+  display: none;
+}

@@ -69,6 +69,7 @@ todo_include_todos = True
 # documentation.
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
+html_js_files = ["publications.js"]
 html_theme_options = {
     "accent_color": "crimson",
     "nav_links": [
@@ -146,21 +147,55 @@ class MyLabelStyle(BaseLabelStyle):
 
 from custom_pybtex import BootstrapBadge
 
+# entry.type -> (badge label, sphinx-design color)
+TYPE_BADGES = {
+    "article": ("Journal", "journal"),
+    "inproceedings": ("Conference", "info"),
+    "conference": ("Conference", "info"),
+    "misc": ("Communication", "warning"),
+    "software": ("Software", "dark"),
+    "book": ("Book", "danger"),
+    "inbook": ("Chapter", "danger"),
+    "phdthesis": ("Thesis", "secondary"),
+    "techreport": ("Report", "secondary"),
+}
+
+AUDIENCE_BADGES = {
+    "INT": "primary",
+    "NAT": "secondary",
+}
+
 
 class MyStyle(UnsrtStyle):
     default_label_style = MyLabelStyle
 
     def format_entry(self, label, entry, bib_data=None):
         formatted = super().format_entry(label, entry, bib_data=bib_data)
-        pub_type = entry.fields.get('audience', '').upper()
+        badges = []
 
-        if pub_type == 'INT':
-            badge = BootstrapBadge('INT', css_class="primary")
-        elif pub_type == 'NAT':
-            badge = BootstrapBadge('NAT', css_class="secondary")
-        else:
+        if entry.type in TYPE_BADGES:
+            text, color = TYPE_BADGES[entry.type]
+            badges.append(
+                BootstrapBadge(text, css_class=color, extra_classes=[f"type-{entry.type}"])
+            )
+
+        audience = entry.fields.get("audience", "").upper()
+        if audience in AUDIENCE_BADGES:
+            badges.append(
+                BootstrapBadge(
+                    audience,
+                    css_class=AUDIENCE_BADGES[audience],
+                    extra_classes=[f"audience-{audience.lower()}"],
+                )
+            )
+
+        if not badges:
             return formatted
-        formatted.text = Text(badge, " ", formatted.text)
+
+        prefix = []
+        for badge in badges:
+            prefix.extend([badge, " "])
+        formatted.text = Text(*prefix, formatted.text)
         return formatted
 
 register_plugin(
