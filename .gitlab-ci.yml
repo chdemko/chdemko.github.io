@@ -20,7 +20,7 @@ test:
     paths:
     - test
   rules:
-    - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_REF_NAME != "main"
 
 pages:
   stage: deploy
@@ -32,4 +32,13 @@ pages:
     paths:
     - public
   rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_REF_NAME == "main"
+
+mirror:
+  stage: deploy
+  before_script: []
+  script:
+  - git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/chdemko/chdemko.github.io.git" "HEAD:refs/heads/${CI_COMMIT_REF_NAME}"
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "main" || $CI_COMMIT_REF_NAME == "develop"
+
