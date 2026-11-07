@@ -1,8 +1,17 @@
 """The configuration module for sphinx."""
 
-from pathlib import Path
 import shutil
 import sys
+from pathlib import Path
+
+from pybtex.plugin import register_plugin
+from pybtex.richtext import Text
+from pybtex.style.formatting.unsrt import Style as UnsrtStyle
+from pybtex.style.labels import BaseLabelStyle
+
+from custom_pybtex import BootstrapBadge
+
+sys.path.insert(0, str(Path(__file__).parent))
 
 html_theme = "shibuya"
 
@@ -11,9 +20,6 @@ project = "χristoφe Демко"
 author = project
 project_copyright = f"1995-%Y, {author}"
 html_title = project
-
-
-sys.path.insert(0, str(Path(__file__).parent))
 
 # -- General configuration ------------------------------------------------
 
@@ -98,11 +104,6 @@ bibtex_bibfiles = [
     "refs.bib",
 ]
 
-from pybtex.plugin import register_plugin
-from pybtex.style.formatting.unsrt import Style as UnsrtStyle
-from pybtex.style.labels import BaseLabelStyle
-from pybtex.richtext import Text
-
 
 class MyLabelStyle(BaseLabelStyle):
     def format_labels(self, sorted_entries):
@@ -144,9 +145,6 @@ class MyLabelStyle(BaseLabelStyle):
             yield f"{prefix}-{year}-{counters[prefix][year]}"
 
 
-
-from custom_pybtex import BootstrapBadge
-
 # entry.type -> (badge label, sphinx-design color)
 TYPE_BADGES = {
     "article": ("Journal", "journal"),
@@ -176,7 +174,11 @@ class MyStyle(UnsrtStyle):
         if entry.type in TYPE_BADGES:
             text, color = TYPE_BADGES[entry.type]
             badges.append(
-                BootstrapBadge(text, css_class=color, extra_classes=[f"type-{entry.type}"])
+                BootstrapBadge(
+                    text,
+                    css_class=color,
+                    extra_classes=[f"type-{entry.type}"],
+                )
             )
 
         audience = entry.fields.get("audience", "").upper()
@@ -197,6 +199,7 @@ class MyStyle(UnsrtStyle):
             prefix.extend([badge, " "])
         formatted.text = Text(*prefix, formatted.text)
         return formatted
+
 
 register_plugin(
     "pybtex.style.formatting",

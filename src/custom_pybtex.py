@@ -1,9 +1,8 @@
-from pybtex.richtext import Tag
 from docutils import nodes
+from pybtex.richtext import Tag
 
 
 class BootstrapBadge(Tag):
-
     def __init__(self, label, css_class="secondary", extra_classes=()):
         super().__init__("span", label)
         self.css_class = css_class
