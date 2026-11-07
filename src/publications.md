@@ -25,7 +25,7 @@ description: "Research publications"
   <input type="radio" name="pub-type" id="pub-type-misc" value="misc">
   <label for="pub-type-misc" class="sd-btn sd-btn-warning">Communication</label>
   <input type="radio" name="pub-type" id="pub-type-software" value="software">
-  <label for="pub-type-software" class="sd-btn sd-btn-dark">Software</label>
+  <label for="pub-type-software" class="sd-btn sd-btn-software">Software</label>
   <input type="radio" name="pub-type" id="pub-type-book" value="book">
   <label for="pub-type-book" class="sd-btn sd-btn-danger">Book</label>
   <input type="radio" name="pub-type" id="pub-type-inbook" value="inbook">

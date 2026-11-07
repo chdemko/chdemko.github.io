@@ -153,7 +153,7 @@ TYPE_BADGES = {
     "inproceedings": ("Conference", "info"),
     "conference": ("Conference", "info"),
     "misc": ("Communication", "warning"),
-    "software": ("Software", "dark"),
+    "software": ("Software", "software"),
     "book": ("Book", "danger"),
     "inbook": ("Chapter", "danger"),
     "phdthesis": ("Thesis", "secondary"),

@@ -33,12 +33,17 @@
   font-weight: 700;
 }
 
-/* Custom purple color for journals (not provided by sphinx-design) */
+/* Custom colors (not provided by sphinx-design), readable in light and dark modes */
 .sd-bg-journal {
   background-color: #7c3aed !important;
 }
 
-.sd-bg-text-journal {
+.sd-bg-software {
+  background-color: #64748b !important;
+}
+
+.sd-bg-text-journal,
+.sd-bg-text-software {
   color: #fff !important;
 }
 
@@ -51,6 +56,18 @@
 .sd-btn-journal:hover {
   background-color: #6d28d9;
   border-color: #6d28d9;
+  color: #fff;
+}
+
+.sd-btn-software {
+  background-color: #64748b;
+  border-color: #64748b;
+  color: #fff;
+}
+
+.sd-btn-software:hover {
+  background-color: #475569;
+  border-color: #475569;
   color: #fff;
 }
 
