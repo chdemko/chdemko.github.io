@@ -36,6 +36,8 @@ pages:
 
 mirror:
   stage: deploy
+  tags:
+    - pagelab
   before_script: []
   script:
   - git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/chdemko/chdemko.github.io.git" "HEAD:refs/heads/${CI_COMMIT_REF_NAME}"
