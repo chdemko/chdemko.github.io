@@ -1,17 +1,22 @@
 """The configuration module for sphinx."""
 
+import html
+import os
+import posixpath
 import shutil
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
 
 from pybtex.plugin import register_plugin
 from pybtex.richtext import Text
 from pybtex.style.formatting.unsrt import Style as UnsrtStyle
 from pybtex.style.labels import BaseLabelStyle
+from sphinx.errors import ConfigError
 
 from custom_pybtex import BootstrapBadge
-
-sys.path.insert(0, str(Path(__file__).parent))
+from site_languages import PAGES
 
 html_theme = "shibuya"
 
@@ -47,7 +52,7 @@ plantuml_output_format = "svg"
 suppress_warnings = []
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ["_templates"]
+templates_path = [str(Path(__file__).parent / "_templates")]
 
 # The master document.
 master_doc = "index"
@@ -57,7 +62,7 @@ master_doc = "index"
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = "en"
+language = os.environ.get("SITE_LANGUAGE", "en")
 
 # The name of the (syntax highlighting) style to use.
 pygments_style = "sphinx"
@@ -73,7 +78,7 @@ todo_include_todos = True
 # Theme options are theme-specific and customise the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-html_static_path = ["_static"]
+html_static_path = [str(Path(__file__).parent / "_static")]
 html_css_files = ["custom.css"]
 html_js_files = ["publications.js"]
 html_theme_options = {
@@ -81,8 +86,10 @@ html_theme_options = {
     "nav_links": [
         {"title": "📰 Blog", "url": "blog/index"},
         {"title": "📚 Publications", "url": "publications"},
-        {"title": "📖 Teaching", "url": "teaching"},
-        {"title": "🏗️ Projects", "url": "projects"},
+        {"title": "📖 Enseignement" if language == "fr" else "📖 Teaching",
+         "url": "enseignement" if language == "fr" else "teaching"},
+        {"title": "🏗️ Projets" if language == "fr" else "🏗️ Projects",
+         "url": "projets" if language == "fr" else "projects"},
     ],
     "page_layout": "compact",
     "hide_breadcrumbs": True,
@@ -101,7 +108,7 @@ html_theme_options = {
 
 # Bibtex
 bibtex_bibfiles = [
-    "refs.bib",
+    str(Path(__file__).parent / "refs.bib"),
 ]
 
 
@@ -157,6 +164,18 @@ TYPE_BADGES = {
     "phdthesis": ("Thesis", "secondary"),
     "techreport": ("Report", "secondary"),
 }
+
+if language == "fr":
+    TYPE_BADGES.update({
+        "article": ("Revue", "journal"),
+        "inproceedings": ("Conférence", "info"),
+        "conference": ("Conférence", "info"),
+        "software": ("Logiciel", "software"),
+        "book": ("Livre", "danger"),
+        "inbook": ("Chapitre", "danger"),
+        "phdthesis": ("Thèse", "secondary"),
+        "techreport": ("Rapport", "secondary"),
+    })
 
 AUDIENCE_BADGES = {
     "INT": "primary",
@@ -214,10 +233,63 @@ bibtex_reference_style = "label"
 def copy_assets(app, exception):
     if exception is not None:
         return
-    source = Path(app.srcdir) / "assets"
+    source = Path(__file__).parent / "assets"
     destination = Path(app.outdir) / "assets"
     shutil.copytree(source, destination, dirs_exist_ok=True)
 
 
+def validate_page_sources(app):
+    root = Path(__file__).parent
+    for language, index in (("en", 0), ("fr", 1)):
+        names = [pair[index] for pair in PAGES.values()]
+        if len(set(names)) != len(names):
+            raise ConfigError(f"Duplicate {language} page in PAGES")
+        for name in names:
+            path = root / language / f"{name}.md"
+            if not path.is_file():
+                raise ConfigError(f"Missing {language} page: {path}")
+
+
+def write_legacy_redirects(app, exception):
+    if exception is not None or app.builder.format != "html":
+        return
+    if app.config.language != "en" or Path(app.outdir).name != "en":
+        return
+    output = Path(app.outdir).parent
+    for old, (english, _) in PAGES.items():
+        destination = output / f"{old}.html"
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        relative = os.path.relpath(
+            Path(app.outdir) / f"{english}.html", destination.parent
+        )
+        escaped = html.escape(relative, quote=True)
+        destination.write_text(
+            '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+            f'<meta http-equiv="refresh" content="0; url={escaped}">'
+            f'<link rel="canonical" href="{escaped}"></head>'
+            f'<body><a href="{escaped}">Continue</a></body></html>\n',
+            encoding="utf-8",
+        )
+
+
+def language_links(app, pagename, templatename, context, doctree):
+    index = 0 if app.config.language == "en" else 1
+    pair = next((pair for pair in PAGES.values() if pair[index] == pagename),
+                None)
+    if pagename in {"search", "genindex"}:
+        pair = (pagename, pagename)
+    if pair:
+        current = posixpath.join(app.config.language, pagename + ".html")
+        context["site_language_links"] = [
+            (label, posixpath.relpath(f"{lang}/{name}.html",
+                                      posixpath.dirname(current)), lang)
+            for label, lang, name in zip(("English", "Français"),
+                                         ("en", "fr"), pair)
+        ]
+
+
 def setup(app):
+    app.connect("builder-inited", validate_page_sources)
     app.connect("build-finished", copy_assets)
+    app.connect("build-finished", write_legacy_redirects)
+    app.connect("html-page-context", language_links)

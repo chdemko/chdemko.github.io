@@ -33,6 +33,22 @@ To choose an output directory, append it after `--`:
 $ hatch run build -- public
 ```
 
+The build produces English pages under `en/` and French pages under `fr/`.
+The original URLs redirect to their English equivalents. Both GitHub Pages and
+GitLab Pages use this same build.
+
+English source pages are in `src/en/`; French pages are in `src/fr/`.
+Each filename corresponds to its published slug. The mapping between pages and
+legacy URLs is maintained in `src/site_languages.py`. When adding a page, add
+its translation and mapping as well as the appropriate toctree entries in both
+languages.
+
+Run the bilingual build checks with:
+
+```shell-session
+$ hatch run python -m unittest discover -s tests
+```
+
 ## Serve
 
 ```shell-session

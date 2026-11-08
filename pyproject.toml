@@ -9,6 +9,8 @@ dependencies = [
 ]
 
 [tool.hatch.envs.default.scripts]
-build = "sphinx-build src {args:build/sphinx/html}"
+build = [
+  "env SITE_LANGUAGE=en sphinx-build -W -c src src/en {args:build/sphinx/html}/en",
+  "env SITE_LANGUAGE=fr sphinx-build -W -c src src/fr {args:build/sphinx/html}/fr",
+]
 serve = "python -m http.server --directory {args:build/sphinx/html}"
-

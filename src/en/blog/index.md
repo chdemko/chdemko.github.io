@@ -15,7 +15,7 @@ description: "Blog posts"
 * 🗓️ 2022-05-11 - [Welcome of a research engineer](2022-05-11-welcome-of-Etienne-Descamps.md)
 * 🗓️ 2022-04-29 - [Welcome of trainees, second phase](2022-04-29-welcome-of-trainees.md)
 * 🗓️ 2022-04-11 - [Welcome of trainees](2022-04-11-welcome-of-trainees.md)
-* 🗓️ 2022-04-09 - [GALACTIC architecture (in french)](2022-04-09-architecture-de-galactic.md)
+* 🗓️ 2022-04-09 - [GALACTIC architecture (in french)](2022-04-09-GALACTIC-architecture.md)
 
 ~~~{toctree}
 :hidden:
@@ -31,5 +31,5 @@ description: "Blog posts"
 2022-05-11-welcome-of-Etienne-Descamps
 2022-04-29-welcome-of-trainees
 2022-04-11-welcome-of-trainees
-2022-04-09-architecture-de-galactic
+2022-04-09-GALACTIC-architecture
 ~~~

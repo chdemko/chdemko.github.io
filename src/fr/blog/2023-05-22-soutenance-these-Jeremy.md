@@ -1,11 +1,10 @@
 ---
-description: Jeremy's thesis defence
+description: Soutenance de thèse de Jérémy
 ---
 
-# 🗓️ 2023-05-22 — Jeremy's thesis defence
+# 🗓️ 2023-05-22 — Soutenance de thèse de Jérémy
 
-Jérémy Richard defended his thesis on May 22th, 2023. Here is a short summary in
-french.
+Jérémy Richard a soutenu sa thèse le 22 mai 2023. En voici un résumé.
 
 Cette thèse porte sur l'étude comportementale de l'activité touristique en
 utilisant une approche d'analyse générique et interactive. Le processus

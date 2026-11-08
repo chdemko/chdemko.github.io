@@ -2,8 +2,8 @@
 layout: landing
 ---
 
-[![Dora's signatory](/_images/Dorabadge1.png)](https://sfdora.org/){.light-only}
-[![Dora's signatory](/_images/Dorabadge1-white.png)](https://sfdora.org/){.dark-only}
+[![Dora's signatory](../_images/Dorabadge1.png)](https://sfdora.org/){.light-only}
+[![Dora's signatory](../_images/Dorabadge1-white.png)](https://sfdora.org/){.dark-only}
 ![Christophe Demko](https://gravatar.com/avatar/4ddabe5dc55cc11f1759600e15f95eaf60f2a4b8d0970a0a268e873d9a9321ce?s=500){w=20ex .rounded}
 
 As an assistant professor at the University of La Rochelle, with tenure dating
