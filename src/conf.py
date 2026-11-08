@@ -86,10 +86,14 @@ html_theme_options = {
     "nav_links": [
         {"title": "📰 Blog", "url": "blog/index"},
         {"title": "📚 Publications", "url": "publications"},
-        {"title": "📖 Enseignement" if language == "fr" else "📖 Teaching",
-         "url": "enseignement" if language == "fr" else "teaching"},
-        {"title": "🏗️ Projets" if language == "fr" else "🏗️ Projects",
-         "url": "projets" if language == "fr" else "projects"},
+        {
+            "title": "📖 Enseignement" if language == "fr" else "📖 Teaching",
+            "url": "enseignement" if language == "fr" else "teaching",
+        },
+        {
+            "title": "🏗️ Projets" if language == "fr" else "🏗️ Projects",
+            "url": "projets" if language == "fr" else "projects",
+        },
     ],
     "page_layout": "compact",
     "hide_breadcrumbs": True,
@@ -166,16 +170,18 @@ TYPE_BADGES = {
 }
 
 if language == "fr":
-    TYPE_BADGES.update({
-        "article": ("Revue", "journal"),
-        "inproceedings": ("Conférence", "info"),
-        "conference": ("Conférence", "info"),
-        "software": ("Logiciel", "software"),
-        "book": ("Livre", "danger"),
-        "inbook": ("Chapitre", "danger"),
-        "phdthesis": ("Thèse", "secondary"),
-        "techreport": ("Rapport", "secondary"),
-    })
+    TYPE_BADGES.update(
+        {
+            "article": ("Revue", "journal"),
+            "inproceedings": ("Conférence", "info"),
+            "conference": ("Conférence", "info"),
+            "software": ("Logiciel", "software"),
+            "book": ("Livre", "danger"),
+            "inbook": ("Chapitre", "danger"),
+            "phdthesis": ("Thèse", "secondary"),
+            "techreport": ("Rapport", "secondary"),
+        }
+    )
 
 AUDIENCE_BADGES = {
     "INT": "primary",
@@ -274,17 +280,18 @@ def write_legacy_redirects(app, exception):
 
 def language_links(app, pagename, templatename, context, doctree):
     index = 0 if app.config.language == "en" else 1
-    pair = next((pair for pair in PAGES.values() if pair[index] == pagename),
-                None)
+    pair = next((pair for pair in PAGES.values() if pair[index] == pagename), None)
     if pagename in {"search", "genindex"}:
         pair = (pagename, pagename)
     if pair:
         current = posixpath.join(app.config.language, pagename + ".html")
-        context["site_language_links"] = [
-            (label, posixpath.relpath(f"{lang}/{name}.html",
-                                      posixpath.dirname(current)), lang)
-            for label, lang, name in zip(("English", "Français"),
-                                         ("en", "fr"), pair)
+        context["languages"] = [
+            (
+                label,
+                posixpath.relpath(f"{lang}/{name}.html", posixpath.dirname(current)),
+                lang,
+            )
+            for label, lang, name in zip(("English", "Français"), ("en", "fr"), pair)
         ]
 
 
