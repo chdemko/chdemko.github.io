@@ -291,7 +291,7 @@ def language_links(app, pagename, templatename, context, doctree):
                 posixpath.relpath(f"{lang}/{name}.html", posixpath.dirname(current)),
                 lang,
             )
-            for label, lang, name in zip(("English", "Français"), ("en", "fr"), pair)
+            for label, lang, name in zip(("🇬🇧 English", "🇫🇷 Français"), ("en", "fr"), pair)
         ]
 
 
