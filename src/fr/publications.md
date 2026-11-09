@@ -8,35 +8,35 @@ description: "Publications scientifiques"
 <div
   class="pub-filter"
   role="radiogroup"
-  aria-labelledby="pub-label-audience"
-  data-filter="audience">
-  <span class="pub-label" id="pub-label-audience">Filtrer par portée :</span>
+  aria-labelledby="pub-label-scope"
+  data-filter="scope">
+  <span class="pub-label" id="pub-label-scope">Filtrer par portée :</span>
   <input
     type="radio"
-    name="pub-audience"
-    id="pub-audience-all"
+    name="pub-scope"
+    id="pub-scope-all"
     value="all" checked>
   <label
-    for="pub-audience-all"
+    for="pub-scope-all"
     class="sd-btn sd-btn-success">TOUT</label>
   <input
     type="radio"
-    name="pub-audience"
-    id="pub-audience-int"
+    name="pub-scope"
+    id="pub-scope-int"
     value="int">
   <label
-    for="pub-audience-int"
+    for="pub-scope-int"
     class="sd-btn sd-btn-primary"
-    title="Audience internationale">INT</label>
+    title="Portée internationale">INT</label>
   <input
     type="radio"
-    name="pub-audience"
-    id="pub-audience-nat"
+    name="pub-scope"
+    id="pub-scope-nat"
     value="nat">
   <label
-    for="pub-audience-nat"
+    for="pub-scope-nat"
     class="sd-btn sd-btn-secondary"
-    title="Audience nationale">NAT</label>
+    title="Portée nationale">NAT</label>
 </div>
 <div
   class="pub-filter"

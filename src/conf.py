@@ -185,7 +185,7 @@ if language == "fr":
         }
     )
 
-AUDIENCE_BADGES = {
+SCOPE_BADGES = {
     "INT": "primary",
     "NAT": "secondary",
 }
@@ -208,13 +208,13 @@ class MyStyle(UnsrtStyle):
                 )
             )
 
-        audience = entry.fields.get("audience", "").upper()
-        if audience in AUDIENCE_BADGES:
+        scope = entry.fields.get("scope", "").upper()
+        if scope in SCOPE_BADGES:
             badges.append(
                 BootstrapBadge(
-                    audience,
-                    css_class=AUDIENCE_BADGES[audience],
-                    extra_classes=[f"audience-{audience.lower()}"],
+                    scope,
+                    css_class=SCOPE_BADGES[scope],
+                    extra_classes=[f"scope-{scope.lower()}"],
                 )
             )
 

@@ -5,14 +5,24 @@ description: "Research publications"
 # 📚 Publications
 
 ```{raw} html
-<div class="pub-filter" role="radiogroup" aria-labelledby="pub-label-audience" data-filter="audience">
-  <span class="pub-label" id="pub-label-audience">Filter by Scope:</span>
-  <input type="radio" name="pub-audience" id="pub-audience-all" value="all" checked>
-  <label for="pub-audience-all" class="sd-btn sd-btn-success">ALL</label>
-  <input type="radio" name="pub-audience" id="pub-audience-int" value="int">
-  <label for="pub-audience-int" class="sd-btn sd-btn-primary" title="International audience">INT</label>
-  <input type="radio" name="pub-audience" id="pub-audience-nat" value="nat">
-  <label for="pub-audience-nat" class="sd-btn sd-btn-secondary" title="National audience">NAT</label>
+<div
+  class="pub-filter"
+  role="radiogroup"
+  aria-labelledby="pub-label-scope"
+  data-filter="scope">
+  <span class="pub-label" id="pub-label-scope">Filter by Scope:</span>
+  <input type="radio" name="pub-scope" id="pub-scope-all" value="all" checked>
+  <label for="pub-scope-all" class="sd-btn sd-btn-success">ALL</label>
+  <input type="radio" name="pub-scope" id="pub-scope-int" value="int">
+  <label
+    for="pub-scope-int"
+    class="sd-btn sd-btn-primary"
+    title="International audience">INT</label>
+  <input type="radio" name="pub-scope" id="pub-scope-nat" value="nat">
+  <label
+    for="pub-scope-nat"
+    class="sd-btn sd-btn-secondary"
+    title="National audience">NAT</label>
 </div>
 <div class="pub-filter" role="radiogroup" aria-labelledby="pub-label-type" data-filter="type">
   <span class="pub-label" id="pub-label-type">Filter by Type:</span>

@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(`input[name="pub-${key}"]:checked`).value;
 
   const apply = () => {
-    const audience = selected("audience");
+    const scope = selected("scope");
     const type = selected("type");
 
     document.querySelectorAll(".citation").forEach((citation) => {
       const visible =
-        (audience === "all" || citation.querySelector(`.audience-${audience}`)) &&
+        (scope === "all" || citation.querySelector(`.scope-${scope}`)) &&
         (type === "all" || citation.querySelector(`.type-${type}`));
       citation.classList.toggle("pub-hidden", !visible);
     });
