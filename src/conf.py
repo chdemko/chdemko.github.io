@@ -55,7 +55,9 @@ suppress_warnings = []
 templates_path = [str(Path(__file__).parent / "_templates")]
 
 # The master document.
-master_doc = "index"
+master_doc = "404" if os.environ.get("SITE_ROOT") == "1" else "index"
+if master_doc == "404":
+    exclude_patterns = ["en/**", "fr/**"]
 
 # The language for content by Sphinx. Refer to documentation
 # for a list of supported languages.
@@ -246,8 +248,8 @@ def copy_assets(app, exception):
 
 def validate_page_sources(app):
     root = Path(__file__).parent
-    for language, index in (("en", 0), ("fr", 1)):
-        names = [pair[index] for pair in PAGES.values()]
+    for language in ("en", "fr"):
+        names = [page[language] for page in PAGES]
         if len(set(names)) != len(names):
             raise ConfigError(f"Duplicate {language} page in PAGES")
         for name in names:
@@ -262,36 +264,36 @@ def write_legacy_redirects(app, exception):
     if app.config.language != "en" or Path(app.outdir).name != "en":
         return
     output = Path(app.outdir).parent
-    for old, (english, _) in PAGES.items():
-        destination = output / f"{old}.html"
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        relative = os.path.relpath(
-            Path(app.outdir) / f"{english}.html", destination.parent
-        )
-        escaped = html.escape(relative, quote=True)
-        destination.write_text(
-            '<!doctype html><html lang="en"><head><meta charset="utf-8">'
-            f'<meta http-equiv="refresh" content="0; url={escaped}">'
-            f'<link rel="canonical" href="{escaped}"></head>'
-            f'<body><a href="{escaped}">Continue</a></body></html>\n',
-            encoding="utf-8",
-        )
+    destination = output / "index.html"
+    relative = os.path.relpath(Path(app.outdir) / "index.html", output)
+    escaped = html.escape(relative, quote=True)
+    destination.write_text(
+        '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+        f'<meta http-equiv="refresh" content="0; url={escaped}">'
+        f'<link rel="canonical" href="{escaped}"></head>'
+        f'<body><a href="{escaped}">Continue</a></body></html>\n',
+        encoding="utf-8",
+    )
 
 
 def language_links(app, pagename, templatename, context, doctree):
-    index = 0 if app.config.language == "en" else 1
-    pair = next((pair for pair in PAGES.values() if pair[index] == pagename), None)
+    language = app.config.language
+    pair = next((page for page in PAGES if page[language] == pagename), None)
     if pagename in {"search", "genindex"}:
-        pair = (pagename, pagename)
+        pair = {"en": pagename, "fr": pagename}
     if pair:
         current = posixpath.join(app.config.language, pagename + ".html")
         context["languages"] = [
             (
                 label,
-                posixpath.relpath(f"{lang}/{name}.html", posixpath.dirname(current)),
+                posixpath.relpath(
+                    f"{lang}/{pair[lang]}.html", posixpath.dirname(current)
+                ),
                 lang,
             )
-            for label, lang, name in zip(("🇬🇧 English", "🇫🇷 Français"), ("en", "fr"), pair)
+            for label, lang in zip(
+                ("🇬🇧 English", "🇫🇷 Français"), ("en", "fr")
+            )
         ]
 
 

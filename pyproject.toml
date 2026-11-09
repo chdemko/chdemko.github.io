@@ -12,5 +12,6 @@ dependencies = [
 build = [
   "env SITE_LANGUAGE=en sphinx-build -W -c src src/en {args:build/sphinx/html}/en",
   "env SITE_LANGUAGE=fr sphinx-build -W -c src src/fr {args:build/sphinx/html}/fr",
+  "env SITE_ROOT=1 sphinx-build -W -c src src {args:build/sphinx/html}",
 ]
 serve = "python -m http.server --directory {args:build/sphinx/html}"
