@@ -1,0 +1,14 @@
+{% extends "!layout/404.html" %}
+
+{% block htmltitle %}
+<base href="/">
+{{ super() }}
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block body %}
+<div class="not-found">
+  {{ body }}
+</div>
+{% endblock %}
