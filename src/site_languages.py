@@ -19,16 +19,16 @@ PAGES = [
         "fr": "blog/2022-04-29-accueil-des-stagiaires",
     },
     {
-        "en": "blog/2022-05-11-welcome-of-Etienne-Descamps",
-        "fr": "blog/2022-05-11-accueil-Etienne-Descamps",
+        "en": "blog/2022-05-11-welcome-of-Étienne-Descamps",
+        "fr": "blog/2022-05-11-accueil-Étienne-Descamps",
     },
     {
         "en": "blog/2022-08-30-Salah-thesis-defence",
-        "fr": "blog/2022-08-30-soutenance-these-Salah",
+        "fr": "blog/2022-08-30-soutenance-thèse-Salah",
     },
     {
-        "en": "blog/2023-05-22-Jeremy-thesis-defence",
-        "fr": "blog/2023-05-22-soutenance-these-Jeremy",
+        "en": "blog/2023-05-22-Jérémy-thesis-defence",
+        "fr": "blog/2023-05-22-soutenance-thèse-Jérémy",
     },
     {
         "en": "blog/2024-02-05-welcome-of-trainees",
