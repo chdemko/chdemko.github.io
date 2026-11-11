@@ -1,0 +1,4 @@
+.yue a:has(> img),
+.yue a:has(> picture) {
+  border:0;
+}
