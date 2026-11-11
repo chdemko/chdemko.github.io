@@ -2,11 +2,16 @@
 
 ## Introduction
 
-This GitLab repository contains the source code for my personal website, which
-is built using
+This repository contains the source code for my personal website, which is
+built using
 [**Hatch**](https://hatch.pypa.io/) and
 [**Sphinx**](https://www.sphinx-doc.org/) with the
 [**Shibuya** theme](https://shibuya.lepture.com/) (`crimson`color).
+
+The site is primarily built and published at
+[chdemko.pagelab.univ-lr.fr](https://chdemko.pagelab.univ-lr.fr/). This
+repository is mirrored on GitHub, allowing the site to be replicated at
+[chdemko.github.io](https://chdemko.github.io/).
 
 The website is deployed on
 [**GitLab Pages**](https://docs.gitlab.com/ee/user/project/pages/) using a GitLab runner
