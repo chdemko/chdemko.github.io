@@ -40,7 +40,9 @@ $ hatch run build -- public
 
 The build produces English pages under `en/`, French pages under `fr/`, and a
 shared bilingual `404.html` at the site root. The root homepage redirects to
-the English homepage. Both GitHub Pages and GitLab Pages use this same build.
+the last visited language using a one-year cookie, or to English if no valid
+preference exists. Without JavaScript, it redirects to English. Both GitHub
+Pages and GitLab Pages use this same build.
 
 English source pages are in `src/en/`; French pages are in `src/fr/`.
 Each filename corresponds to its published slug. The mapping between translated

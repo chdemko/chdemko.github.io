@@ -94,19 +94,24 @@ class HighlightNameStyle(NameStyle):
         return formatted
 
 
+def badge_classes(color, extra_classes=()):
+    return [
+        "sd-badge",
+        f"sd-bg-{color}",
+        f"sd-bg-text-{color}",
+        *extra_classes,
+    ]
+
+
 class LinkBadge(HRef):
     def render(self, backend):
         rendered = super().render(backend)
         if isinstance(backend, DocutilsBackend):
             for link in rendered:
                 link["classes"].extend(
-                    [
-                        "sd-badge",
-                        f"sd-bg-{self.color}",
-                        f"sd-bg-text-{self.color}",
-                        "link-badge",
-                        f"{self.color}-link-badge",
-                    ]
+                    badge_classes(
+                        self.color, ("link-badge", f"{self.color}-link-badge")
+                    )
                 )
         return rendered
 
@@ -131,7 +136,7 @@ def url_button(children, context):
     return URLButton(url, "URL")
 
 
-class BootstrapBadge(Tag):
+class SimpleBadge(Tag):
     def __init__(self, label, css_class="secondary", extra_classes=()):
         super().__init__("span", label)
         self.css_class = css_class
@@ -147,12 +152,7 @@ class BootstrapBadge(Tag):
                     "",
                     "",
                     *rendered,
-                    classes=[
-                        "sd-badge",
-                        f"sd-bg-{self.css_class}",
-                        f"sd-bg-text-{self.css_class}",
-                        *self.extra_classes,
-                    ],
+                    classes=badge_classes(self.css_class, self.extra_classes),
                 )
             ]
         return rendered

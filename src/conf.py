@@ -15,7 +15,7 @@ from pybtex.style.formatting.unsrt import Style as UnsrtStyle
 from sphinx.errors import ConfigError
 
 from custom_pybtex import (
-    BootstrapBadge,
+    SimpleBadge,
     HighlightNameStyle,
     MyLabelStyle,
     RecentFirstSortingStyle,
@@ -89,6 +89,8 @@ todo_include_todos = True
 html_static_path = [str(Path(__file__).parent / "_static")]
 html_css_files = ["custom.css"]
 html_js_files = ["publications.js"]
+if master_doc != "404":
+    html_js_files.append("language.js")
 html_theme_options = {
     "accent_color": "crimson",
     "nav_links": [
@@ -175,7 +177,7 @@ class MyStyle(UnsrtStyle):
         if entry.type in TYPE_BADGES:
             text, color = TYPE_BADGES[entry.type]
             badges.append(
-                BootstrapBadge(
+                SimpleBadge(
                     text,
                     css_class=color,
                     extra_classes=[f"type-{entry.type}"],
@@ -185,7 +187,7 @@ class MyStyle(UnsrtStyle):
         scope = entry.fields.get("scope", "").upper()
         if scope in SCOPE_BADGES:
             badges.append(
-                BootstrapBadge(
+                SimpleBadge(
                     scope,
                     css_class=SCOPE_BADGES[scope],
                     extra_classes=[f"scope-{scope.lower()}"],
@@ -243,9 +245,18 @@ def write_legacy_redirects(app, exception):
     escaped = html.escape(relative, quote=True)
     destination.write_text(
         '<!doctype html><html lang="en"><head><meta charset="utf-8">'
-        f'<meta http-equiv="refresh" content="0; url={escaped}">'
-        f'<link rel="canonical" href="{escaped}"></head>'
-        f'<body><a href="{escaped}">Continue</a></body></html>\n',
+        f'<link rel="canonical" href="{escaped}">'
+        '<script>'
+        'const language = document.cookie.split(";").map('
+        'cookie => cookie.trim()).find('
+        'cookie => cookie.startsWith("site_language="))?.slice(14);'
+        'window.location.replace(language === "fr" ? "fr/index.html" : '
+        '"en/index.html");'
+        '</script>'
+        f'<noscript><meta http-equiv="refresh" content="0; url={escaped}">'
+        '</noscript></head>'
+        f'<body><a href="{escaped}">English</a> | '
+        '<a href="fr/index.html">Français</a></body></html>\n',
         encoding="utf-8",
     )
 
