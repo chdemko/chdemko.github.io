@@ -19,6 +19,8 @@ from custom_pybtex import (
     HighlightNameStyle,
     MyLabelStyle,
     RecentFirstSortingStyle,
+    doi_button,
+    url_button,
 )
 from site_languages import PAGES
 
@@ -159,6 +161,12 @@ class MyStyle(UnsrtStyle):
     default_label_style = MyLabelStyle
     default_name_style = HighlightNameStyle
     default_sorting_style = RecentFirstSortingStyle
+
+    def format_doi(self, entry):
+        return doi_button
+
+    def format_url(self, entry):
+        return url_button
 
     def format_entry(self, label, entry, bib_data=None):
         formatted = super().format_entry(label, entry, bib_data=bib_data)

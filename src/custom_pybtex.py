@@ -1,10 +1,11 @@
 from docutils import nodes
 from pybtex.database import Person
-from pybtex.richtext import Tag
+from pybtex.richtext import HRef, Tag
 from pybtex.style.labels import BaseLabelStyle
 from pybtex.style.names.plain import NameStyle
 from pybtex.style.sorting import BaseSortingStyle
-from pybtex.style.template import href, tag
+from pybtex.style.template import field, href, node, tag
+from pybtex_docutils import Backend as DocutilsBackend
 
 
 BOLD_NAMES = (
@@ -91,6 +92,43 @@ class HighlightNameStyle(NameStyle):
             if person == Person(name):
                 return href(url)[formatted]
         return formatted
+
+
+class LinkBadge(HRef):
+    def render(self, backend):
+        rendered = super().render(backend)
+        if isinstance(backend, DocutilsBackend):
+            for link in rendered:
+                link["classes"].extend(
+                    [
+                        "sd-badge",
+                        f"sd-bg-{self.color}",
+                        f"sd-bg-text-{self.color}",
+                        "link-badge",
+                        f"{self.color}-link-badge",
+                    ]
+                )
+        return rendered
+
+
+class DOIButton(LinkBadge):
+    color = "primary"
+
+
+class URLButton(LinkBadge):
+    color = "info"
+
+
+@node
+def doi_button(children, context):
+    doi = field("doi", raw=True).format_data(context)
+    return DOIButton(f"https://doi.org/{doi}", "DOI")
+
+
+@node
+def url_button(children, context):
+    url = field("url", raw=True).format_data(context)
+    return URLButton(url, "URL")
 
 
 class BootstrapBadge(Tag):

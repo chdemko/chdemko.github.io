@@ -33,6 +33,31 @@
   font-weight: 700;
 }
 
+.citation a.link-badge,
+.citation a.link-badge:hover,
+.citation a.link-badge:focus {
+  text-decoration: none;
+}
+
+.citation a.primary-link-badge:hover,
+.citation a.primary-link-badge:focus-visible {
+  background-color: var(--sd-color-primary-highlight) !important;
+}
+
+.citation a.info-link-badge:hover,
+.citation a.info-link-badge:focus-visible {
+  background-color: var(--sd-color-info-highlight) !important;
+}
+
+.citation a.link-badge:focus-visible {
+  outline: 2px solid var(--sd-color-primary);
+  outline-offset: 2px;
+}
+
+.citation a.info-link-badge:focus-visible {
+  outline-color: var(--sd-color-info);
+}
+
 /* Custom colors (not provided by sphinx-design), readable in light and dark modes */
 .sd-bg-journal {
   background-color: #7c3aed !important;
