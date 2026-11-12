@@ -52,12 +52,6 @@ Publications are displayed newest first and numbered oldest first within each
 year and publication type. Entries without a month appear first within their
 year; entries with the same month retain their BibTeX order.
 
-Run the bilingual build checks with:
-
-```shell-session
-$ hatch run python -m unittest discover -s tests
-```
-
 ## Serve
 
 ```shell-session
