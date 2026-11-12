@@ -51,6 +51,10 @@ languages.
 Publications are displayed newest first and numbered oldest first within each
 year and publication type. Entries without a month appear first within their
 year; entries with the same month retain their BibTeX order.
+Configure names to emphasize in `BOLD_NAMES` and personal author links in
+`AUTHOR_LINKS` at the beginning of `src/custom_pybtex.py`. Names may use
+either `First Last` or BibTeX's `Last, First` format. For a compound
+surname, use `Last Last, First` to match its interpretation in `refs.bib`.
 
 ## Serve
 

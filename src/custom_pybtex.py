@@ -1,8 +1,21 @@
 from docutils import nodes
+from pybtex.database import Person
 from pybtex.richtext import Tag
 from pybtex.style.labels import BaseLabelStyle
+from pybtex.style.names.plain import NameStyle
 from pybtex.style.sorting import BaseSortingStyle
+from pybtex.style.template import href, tag
 
+
+BOLD_NAMES = (
+    "Demko, Christophe",
+)
+
+AUTHOR_LINKS = {
+    "Guillaume, Jean-Loup": "https://jlguillaume.fr/",
+    "Bertet, Karell": "https://kbertet.pagelab.univ-lr.fr/",
+    "Waffo Kemgne, Martin": "https://martinwaffo.github.io/",
+}
 
 MONTHS = {}
 for number, name in enumerate(
@@ -67,6 +80,17 @@ class MyLabelStyle(BaseLabelStyle):
             labels.append(f"{prefix}-{year}-{counters[key]}")
 
         yield from reversed(labels)
+
+
+class HighlightNameStyle(NameStyle):
+    def format(self, person, abbr=False):
+        formatted = super().format(person, abbr=abbr)
+        if any(person == Person(name) for name in BOLD_NAMES):
+            formatted = tag("strong")[formatted]
+        for name, url in AUTHOR_LINKS.items():
+            if person == Person(name):
+                return href(url)[formatted]
+        return formatted
 
 
 class BootstrapBadge(Tag):

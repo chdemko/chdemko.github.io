@@ -14,7 +14,12 @@ from pybtex.richtext import Text
 from pybtex.style.formatting.unsrt import Style as UnsrtStyle
 from sphinx.errors import ConfigError
 
-from custom_pybtex import BootstrapBadge, MyLabelStyle, RecentFirstSortingStyle
+from custom_pybtex import (
+    BootstrapBadge,
+    HighlightNameStyle,
+    MyLabelStyle,
+    RecentFirstSortingStyle,
+)
 from site_languages import PAGES
 
 html_theme = "shibuya"
@@ -152,6 +157,7 @@ SCOPE_BADGES = {
 
 class MyStyle(UnsrtStyle):
     default_label_style = MyLabelStyle
+    default_name_style = HighlightNameStyle
     default_sorting_style = RecentFirstSortingStyle
 
     def format_entry(self, label, entry, bib_data=None):
