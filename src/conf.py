@@ -12,10 +12,9 @@ sys.path.insert(0, str(Path(__file__).parent))
 from pybtex.plugin import register_plugin
 from pybtex.richtext import Text
 from pybtex.style.formatting.unsrt import Style as UnsrtStyle
-from pybtex.style.labels import BaseLabelStyle
 from sphinx.errors import ConfigError
 
-from custom_pybtex import BootstrapBadge
+from custom_pybtex import BootstrapBadge, MyLabelStyle, RecentFirstSortingStyle
 from site_languages import PAGES
 
 html_theme = "shibuya"
@@ -118,46 +117,6 @@ bibtex_bibfiles = [
 ]
 
 
-class MyLabelStyle(BaseLabelStyle):
-    def format_labels(self, sorted_entries):
-        counters = {
-            "J": {},
-            "C": {},
-            "S": {},
-            "W": {},
-            "B": {},
-            "H": {},
-            "T": {},
-            "R": {},
-            "P": {},
-        }
-
-        for entry in sorted_entries:
-            if entry.type == "article":
-                prefix = "J"
-            elif entry.type in ("inproceedings", "conference"):
-                prefix = "C"
-            elif entry.type == "software":
-                prefix = "S"
-            elif entry.type == "inbook":
-                prefix = "H"
-            elif entry.type == "book":
-                prefix = "B"
-            elif entry.type == "phdthesis":
-                prefix = "P"
-            elif entry.type == "techreport":
-                prefix = "R"
-            else:
-                prefix = "W"
-
-            year = entry.fields.get("year", "????")
-
-            counters[prefix].setdefault(year, 0)
-            counters[prefix][year] += 1
-
-            yield f"{prefix}-{year}-{counters[prefix][year]}"
-
-
 # entry.type -> (badge label, sphinx-design color)
 TYPE_BADGES = {
     "article": ("Journal", "journal"),
@@ -193,6 +152,7 @@ SCOPE_BADGES = {
 
 class MyStyle(UnsrtStyle):
     default_label_style = MyLabelStyle
+    default_sorting_style = RecentFirstSortingStyle
 
     def format_entry(self, label, entry, bib_data=None):
         formatted = super().format_entry(label, entry, bib_data=bib_data)

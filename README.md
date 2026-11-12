@@ -48,6 +48,10 @@ pages is maintained in `src/site_languages.py`. When adding a page, add its
 translation and mapping as well as the appropriate toctree entries in both
 languages.
 
+Publications are displayed newest first and numbered oldest first within each
+year and publication type. Entries without a month appear first within their
+year; entries with the same month retain their BibTeX order.
+
 Run the bilingual build checks with:
 
 ```shell-session
