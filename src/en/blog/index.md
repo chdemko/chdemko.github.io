@@ -4,6 +4,7 @@ description: "Blog posts"
 
 # 📰 Blog
 
+* 🗓️ 2026-11-13 - [Strings description](2026-11-13-GALACTIC-strings-description.md)
 * 🗓️ 2026-08-12 - [🏁 End of CRCT](2026-08-12-end-of-CRCT.md)
 * 🗓️ 2026-07-05 - [🚀 GALACTIC 0.5 is here!](2026-07-05-GALACTIC-0.5.md)
 * 🗓️ 2026-05-11 - [Welcome to Julien Linares](2026-05-11-welcome-of-trainees.md)
@@ -20,6 +21,7 @@ description: "Blog posts"
 ~~~{toctree}
 :hidden:
 
+2026-11-13-GALACTIC-strings-description
 2026-08-12-end-of-CRCT
 2026-07-05-GALACTIC-0.5
 2026-05-11-welcome-of-trainees

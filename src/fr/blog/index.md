@@ -4,6 +4,7 @@ description: "Articles du blog"
 
 # 📰 Blog
 
+* 🗓️ 2026-11-13 - [Description de chaines de caractères](2026-11-13-description-chaine-caractères-GALACTIC.md)
 * 🗓️ 2026-08-12 - [🏁 Fin du CRCT](2026-08-12-fin-du-CRCT.md)
 * 🗓️ 2026-07-05 - [🚀 GALACTIC 0.5 est disponible](2026-07-05-GALACTIC-0.5.md)
 * 🗓️ 2026-05-11 -
@@ -26,6 +27,7 @@ description: "Articles du blog"
 ~~~{toctree}
 :hidden:
 
+2026-11-13-description-chaine-caractères-GALACTIC
 2026-08-12-fin-du-CRCT
 2026-07-05-GALACTIC-0.5
 2026-05-11-accueil-des-stagiaires
