@@ -2,6 +2,8 @@
 description: Strings description
 ---
 
+# 🗓️ 2026-11-13 — Strings description
+
 As part of the **GALACTIC** project, I developed a Python function that
 builds string descriptions in the form of regular expressions.
 

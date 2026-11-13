@@ -2,6 +2,8 @@
 description: Description de chaines de caractères
 ---
 
+# 🗓️ 2026-11-13 — Description de chaines de caractères
+
 Dans le cadre du projet **GALACTIC**, j’ai développé une fonction Python
 pour construire des descriptions de chaînes de caractères sous forme
 d’expressions régulières.

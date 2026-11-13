@@ -54,4 +54,8 @@ PAGES = [
         "en": "blog/2026-08-12-end-of-CRCT",
         "fr": "blog/2026-08-12-fin-du-CRCT",
     },
+    {
+        "en": "blog/2026-11-13-GALACTIC-strings-description",
+        "fr": "blog/2026-11-13-description-chaine-caractères-GALACTIC",
+    },
 ]
